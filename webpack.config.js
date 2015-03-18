@@ -26,7 +26,8 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.json$/, loader: 'json-loader' },
-      { test: /\.js$/, loader: 'jsx-loader?harmony' }
+      // { test: /\.js$/, loader: 'jsx-loader?harmony' }
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'}
     ]
   },
 
